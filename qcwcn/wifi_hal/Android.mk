@@ -27,6 +27,7 @@ endif
 LOCAL_CLANG_CFLAGS := -Wno-pointer-bool-conversion
 
 LOCAL_CFLAGS += -Wall -Werror
+LOCAL_CFLAGS += -Wno-implicit-fallthrough
 
 LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH) \
@@ -83,6 +84,8 @@ LOCAL_REQUIRED_MODULES :=
 
 LOCAL_CFLAGS += -Wno-unused-parameter -Wall -Werror
 LOCAL_CPPFLAGS += -Wno-conversion-null
+LOCAL_CFLAGS += -Wno-implicit-fallthrough
+
 ifeq ($(TARGET_BUILD_VARIANT),userdebug)
 LOCAL_CFLAGS += "-DLOG_NDEBUG=0"
 endif
